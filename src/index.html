@@ -27,24 +27,33 @@
         <div class="container">
             <!-- shopContainer -->
             <div class="shopContainer">
-                <!-- 优惠 、 特惠 -->
-                <div class="block discount">
-                    <h2>CFM周边上线特惠<i>品质重现，限量发售</i><a href="#" class="more">更少<i class="icon"></i></a></h2>
-                    <div class="adWarp">
-                        <a href="#">
-                            <img src="/images/header2.jpg" alt="adImg">
-                        </a>
+                <!-- 商品区域 -->
+                <div class="block" id="shop1"></div>
+                <div class="block" id="shop2"></div>
+                <div class="block" id="shop3"></div>
+                <div class="block" id="shop4"></div>
+
+                <!-- 商品头部模板(主标题，副标题， 广告大图) -->
+                <script type="text/html" id="shoppingTitle">
+                    <div class="titleWarp">
+                            <h2>{{ item.title }}<i>{{item.subHeading}}</i><a href="#" class="more">更少<i class="icon"></i></a></h2>
+                            <div class="adWarp">
+                                <a href="#">
+                                    <img src="{{item.img}}" alt="adImg">
+                                </a>
+                            </div>
                     </div>
+                </script>
+                <!-- 商品内容模板，四条商品信息 -->
+                <script type="text/html" id="shoppingContent">
                     <div class="goodBox">
                         <a href="#" class="good">
-                            <img src="/images/blt-hm.jpg" alt="blt">
-                            <p class="name">巴雷特-毁灭....</p>
-                            <p class="money">255</p>
+                            <img src="{{ item.img }}" alt="blt">
+                            <p class="name">{{ item.name }}</p>
+                            <p class="money">{{ item.money }}</p>
                         </a>
                     </div>
-                </div>
-                <!-- / 优惠 、 特惠 -->
-
+                </script>
             </div>
             <!--  / shopContainer -->
         </div>
