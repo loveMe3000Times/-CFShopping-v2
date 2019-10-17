@@ -1,0 +1,304 @@
+@import "./modules/reset.scss";
+@import "./modules/_header.scss";
+
+
+.container{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+body{
+    font: 14px/30px Microsoft YaHei;
+    background-color: #f5f5f5;
+}
+
+/* - 网址路径 - */
+.hMap{
+    margin: 20px 0 40px;
+    a{
+        font: 14px/26px 'Microsoft Yahei';
+        padding-left: 8px;
+        color: #828282;
+        margin-right: -8px;
+        &:last-child{
+            color: #3a3f4a;
+        }
+    }
+}
+
+/* - detail { - */
+#detail{
+    height: 600px;
+    padding:{
+        top:35px;
+        left: 30px;
+    }
+    background:{
+        color: #fff;
+    }
+    /* left: 图片区域 { */
+    .left{
+        float: left;
+        width: 440px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .bigImg{
+            display: none;
+            width: 920px;
+            height: 880px;
+            overflow: hidden;
+        }
+        .middleImg{
+            width: 460px;
+            height: 440px;
+        }
+        .smallImg{
+            width: 100%;
+            img{
+                float: left;
+                margin-left: 10px;
+                width: 74px;
+                height: 70px;
+                cursor: pointer;
+            }
+            .ac {
+                border: 2px solid #f74f4a;
+            }
+        }
+    }
+    /* } left: 图片区域 */
+    /* right: 商品详情{ */
+    .right{
+        float: left;
+        width: 730px;
+        margin-left: 40px;
+        // 标题
+        .shopName{
+            width: 100%;
+            line-height: 36px;
+            font-size: 28px;
+            color: #333;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        // 描述
+        .desc{
+            padding: 22px 0 0;
+            width: 100%;
+            font-size: 14px;
+            color: #aaa;
+            line-height: 15px;
+        }
+        // 价格
+        .price{
+            width: 100%;
+            height: 32px;
+            padding: 20px 0 15px;
+            .salePrice{
+                float: left;
+                font-size: 36px;
+                color: #f74f4a;
+                line-height: 31px;
+                &::before{
+                    content: "￥";
+                    display: inline;
+                }
+            }
+            .originPrice{
+                float: left;
+                padding-left: 5px;
+                font-size: 16px;
+                line-height: 38px;
+                text-decoration: line-through;
+                color: #999;
+                &::before{
+                    content: "￥";
+                    display: inline;
+                }
+            }
+        }
+        // 赠品
+        .gift{
+            margin-bottom: 14px;
+            line-height: 20px;
+            font-size: 14px;
+            color: #666;
+            &::before{
+                content: "赠品";
+                display: inline-block;
+                padding: 1px 12px;
+                margin-right: 12px;
+                background: #ffcccc;
+                border: 1px solid #ff3333;
+                color: #ff3333;
+            }
+        }
+        // 销售情况
+        .saleDesc{
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            color: #333;
+            border-top: 1px dashed #eee;
+            border-bottom: 1px dashed #eee;
+            font-size: 14px;
+            div{
+                float: left;
+            }
+            .saleNum{
+                width: 310px;
+                &::before{
+                    content: "已售";
+                    display: inline;
+                    color: #999;
+                    margin-right: 15px;
+                }
+            }
+            .appraiseNum{
+                width: 120px;
+                &:before{
+                    content: "累计评价";
+                    display: inline;
+                    color: #999;
+                    margin-right: 15px;
+                }
+            }
+            .score{
+                float: right;
+                font-size: 20px;
+                color: #ffd92c;
+                width: 160px;
+                .icon{
+                    float: right;
+                    margin-top: 21px;
+                    width: 110px;
+                    height: 18px;
+                    background:{
+                        image:url(../images/detail.png);
+                        position: 0px -104px;
+                    }
+                }
+            }
+        }
+        // 枪模
+        .like > p, .buyNum > p{
+            float: left;
+            margin-right: 30px;
+            color: #999;
+            line-height: 44px;
+        }
+        .like{
+            height: 44px;
+            padding: 10px 0;
+            > a{
+                float: left;
+                margin: 6px 0 10px 9px;
+                width: 94px;
+                height: 32px;
+                line-height: 32px;
+                font-size: 14px;
+                border: 1px solid #ddd;
+                color: #333;
+                text-align: center;
+            }
+            .ac {
+                border: 2px solid #f74f4a;
+            }
+        } 
+    }
+
+    // 选购数量
+    .buyNum{
+        height: 40px;
+        margin: 20px 0;
+        .warp{
+            float: left;
+            margin-left: 10px;
+            width: 150px;
+            height: 40px;
+            div{
+                float: left;
+                height: 34px;
+                border: 1px solid #ddd;
+                cursor: pointer;
+                text-align: center;
+                line-height: 34px;
+                font-weight: 900;
+            }
+            .less{
+                width: 34px;
+            }
+            .num{
+                float: left;
+                height: 32px;
+                border: 1px solid #ddd;
+                width: 58px;
+                border-left: none;
+                border-right: none;
+                text-align: center;
+                line-height: 34px;
+                color: #333;
+                display: block;
+                font-size: 14px;
+                cursor: default;
+            }
+            .more{
+                width: 34px;
+            }
+            .ourNum{
+                float: left;
+            }
+        }
+    }
+
+    /* 操作按钮 { */
+    .operation{
+        height: 60px;
+        margin-top: 10px;
+        #addCart, #buyNow{
+            float: left;
+            margin-right: 20px;
+            display: block;
+            width: 200px;
+            height: 56px;
+            line-height: 56px;
+            text-align: center;
+            font-size: 20px;
+            color: #fff;
+            background: #e34424;
+        }
+        #collection{
+            position: relative;
+            float: left;
+            margin: 12px 0 0 30px;
+            padding-left: 20px;
+            display: block;
+            width: 64px;
+            height: 28px;
+            line-height: 28px;
+            border: 2px solid #ddd;
+            border-radius: 30px;
+            font-size: 14px;
+            color: #888;
+            text-indent: 16px;
+            .icon-love{
+                position: absolute;
+                top: 7px;
+                left: 14px;
+                z-index: 2;
+                width: 16px;
+                height: 14px;
+                background-position: -107px -2px;
+                background-image: url(../images/detail.png);
+            }
+        }
+    }
+    /* } 操作按钮 */
+    /* } right: 商品详情 */
+
+
+}
+/* - } detail - */

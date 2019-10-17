@@ -9,7 +9,6 @@ define(["jquery", "template"], ($, template) => {
             });
         }
         /** 加载header html 代码
-         * 
          ************************************/
         loadHtml() {
             return new Promise((resolve, reject) => {
@@ -18,7 +17,6 @@ define(["jquery", "template"], ($, template) => {
         }
 
         /**  搜索框事件(baidu接口)
-         * 
          *************************************/
         search() {
             $("#search").on('keyup', function () {
@@ -44,7 +42,6 @@ define(["jquery", "template"], ($, template) => {
         }
 
         /** 搜索数据框（search搜索关联结果的选择）点击事件
-         * 
          **************************************/
         searchUlClick() {
             $("#search + ul").on("mouseup", "li", function () {
@@ -55,17 +52,24 @@ define(["jquery", "template"], ($, template) => {
         }
 
         /** （全部商品分类按钮），移入出现，移出nav 消失
-         * 
-         */
+         *******************************************/
         allShopControl() {
+            // 鼠标移入 全部商品分类
             $("header nav .right").on('mouseenter', () => {
                 $("header .menu").css("display", "block");
                 $("header nav .right span:nth-child(2)").css({"background-position":"-66px -0px"});
             });
+            // 鼠标移出菜单栏
             $("header .menu").on('mouseleave', () => {
                 $("header .menu").css("display", "none");
                 $("header nav .right span:nth-child(2)").css({"background-position":" -100px -0px"});
             });
+        }
+
+        /** 移除 公告栏
+         *********************************/
+        removeNotice(){
+            $(".notice").remove();
         }
     }
 

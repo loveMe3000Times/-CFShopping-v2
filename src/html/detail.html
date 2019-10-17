@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>详情页</title>
+    <link rel="stylesheet" href="/css/detail.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <header></header>
+
+    <!-- 网址路径 -->
+    <div class="hMap">
+        <div class="container">
+            <a href="#">首页></a>
+            <a href="#">首页></a>
+            <a href="#">首页</a>
+        </div>
+    </div>
+    <!-- / 网址路径 -->
+
+    <div class="container">
+    <!--------------------- detail --------------------->
+    <div id="detail">
+        <!-- left:图片区域 -->
+        <div class="left">
+            <div class="bigImg">
+                    <img src="/images/jianpan.jpg" alt="">
+            </div>
+            <div class="middleImg">
+                <img src="/images/jianpan.jpg" alt="">
+            </div>
+            <div class="smallImg">
+                <img src="/images/sjk1.jpg" alt="">
+                <img src="/images/sjk2.jpg" alt="">
+                <img src="/images/sjk3.jpg" alt="">
+                <img src="/images/sjk4.jpg" alt="">
+            </div>
+        </div>
+        <!-- / left:图片区域 -->
+        
+        <!-- right: 商品数据 -->
+        <div class="right">
+            <p class="shopName">巴雷特 - 一枪一滴血!</p>
+            <p class="desc">活动期间免费提供专属铭牌定制服务，详情咨询客服QQ800053395、800093207</p>
+            <div class="price">
+                <div class="salePrice">258.00</div>
+                <div class="originPrice">298.00</div>
+            </div>
+            <div class="gift">主题收集-毁灭枪模</div>
+            <div class="saleDesc">
+                <div class="saleNum">9264</div>
+                <div class="appraiseNum">998</div>
+                <div class="score"><span class="icon"></span>5.0</div>
+            </div>
+            <div class="like">
+                <p>枪模</p>
+                <a href="#">大枪</a>
+                <a href="#">弹药</a>
+                <a href="#">漫游</a>
+            </div>
+            <div class="buyNum">
+                <p>数量</p>
+                <div class="warp">
+                    <div class="less" id="less">-</div>
+                    <input type="text" class="num" id="num" value="1" />
+                    <div class="more" id="more">+</div>
+                </div>
+                <p class="ourNum">(库存充足)</p>
+            </div>
+            <div class="operation">
+                <a href="#" id="addCart">加入购物车</a>
+                <a href="#" id="buyNow">立即购买</a>
+                <a href="#" id="collection"><span class="icon-love"></span>收藏</a>
+            </div>
+        </div>
+        <!-- / right: 商品数据 -->
+    </div>
+    <!--------------------- / detail --------------------->
+</div>
+
+
+
+</body>
+<script src="/libs/require/require.min.js" data-main="/js/detail"></script>
+
+</html>
