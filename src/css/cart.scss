@@ -1,0 +1,298 @@
+@charset 'utf-8';
+@import './modules/reset.scss';
+@import './modules/_header.scss';
+
+
+section{
+    padding: 84px 0;
+    color: #666;
+    font-size: 14px;
+    .cartWarp{
+        // 空购物车
+        #noShopping{
+            display: none;
+            margin-top: 18px;
+            border-top: 1px dashed #e3e3e3;
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 30px;
+            text-align: center;
+            a{
+                color: #f74a4a;
+            }
+        }
+
+        // 商品表头 
+        .title{
+            font-size: 16px;
+            line-height: 26px;
+            padding: 15px 0;
+            background: #fff;
+            $colWidth: 60px; // $ 一列的宽度
+            /** 设置一项的宽度，以及左偏移量
+            ********************************/
+            @mixin posi($width, $marleft) {
+                width: $colWidth * $width;
+                margin-left: $colWidth * $marleft;
+            }
+            p{
+                float: left;
+            }
+            .inforName{
+                @include posi(5, 4);
+            }
+            .money{
+                @include posi(2, 2);
+            }
+            .num{
+                @include posi(1, 1);
+            }
+            .total{
+                @include posi(2, 2);
+            }
+            .operation{
+                @include posi(1, 0);
+            }
+        }
+
+        
+        /* - 供应商：supplier { - */
+        .supplier{
+            .sTitle{
+                font-size: 16px;
+                line-height: 26px;
+                padding: 25px 0 15px;
+                p{
+                    float: left;
+                }
+            }
+            .content{
+                background: #fff;
+                margin-bottom: 10px;
+                padding: 20px 0;
+                .goods{
+                    .checkWarp{
+                        top: 48px;
+                    }
+                    > div{
+                        float: left;
+                    }
+                    // 图片
+                    .imgWarp{
+                        position: relative;
+                        width: 113px;
+                        height: 113px;
+                        overflow: hidden;
+                        border: 1px solid #ddd;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    // 商品描述
+                    .desc{
+                        margin-left: 40px;
+                        width: 200px;
+                        .goodsName{
+                            display: block;
+                            width: 240px;
+                            max-height: 48px;
+                            margin-top: 5px;
+                            overflow: hidden;
+                        }
+                        .vip{
+                            display: block;
+                            font-size: 12px;
+                            color: #f74a4a;
+                            border: 1px solid #f599a0;
+                            border-radius: 3px;
+                            padding: 0 4px;
+                            margin:{
+                                top:5px;
+                                bottom: 5px;
+                            }
+                            line-height: 18px;
+                        }
+                        .gift{
+                            color: #999;
+                        }
+                    }
+                    .sName{
+                        margin-left: 65px;
+                        width: 100px;
+                    }
+                    // 单价
+                    .moneyWarp{
+                        margin-left: 70px;
+                        width: 100px;
+                        .originMoney, .money{
+                            display: block;
+                            height: 1.5em;
+                            font-weight: 600;
+                            color: #000;
+                            &:after{
+                                content: " 元";
+                                display: inline-block;
+                            }
+                        }
+                        .originMoney{
+                            font-weight: 100;
+                            text-decoration: line-through;
+                            color: #999;
+                        }
+                    }
+                    // 数量
+                    .numWarp{
+                        margin-left: 30px;
+                        width: 100px;
+                        .warp{
+                            float: left;
+                            margin-left: 10px;
+                            width: 150px;
+                            height: 40px;
+                            div{
+                                float: left;
+                                height: 34px;
+                                border: 1px solid #ddd;
+                                cursor: pointer;
+                                text-align: center;
+                                line-height: 34px;
+                                font-weight: 900;
+                            }
+                            .less{
+                                width: 34px;
+                            }
+                            .num{
+                                float: left;
+                                height: 32px;
+                                border: 1px solid #ddd;
+                                width: 58px;
+                                border-left: none;
+                                border-right: none;
+                                text-align: center;
+                                line-height: 34px;
+                                color: #333;
+                                display: block;
+                                font-size: 14px;
+                                cursor: default;
+                            }
+                            .more{
+                                width: 34px;
+                            }
+                            .ourNum{
+                                float: left;
+                            }
+                        }
+                    }
+                    // 总价
+                    .total{
+                        margin-left: 130px;
+                        font-weight: 600;
+                        width: 100px;
+                        color: #000;
+                        &::after{
+                            content: " 元";
+                            display: inline-block;
+                        }
+                    }
+                    // 操作
+                    .operation{
+                        margin-left: 15px;
+                        a{
+                            display: block;
+                            color: #000;
+                            &:hover{
+                                color: #f74a4a;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        /* - } 供应商：supplier - */
+
+        /* - 去结算：count { - */
+        .countWrap{
+            height: 72px;
+            background: #fff;
+            position: relative;
+            .box{
+                float: right;
+                margin: 6px 180px 0 0;
+                padding-top: 3px;
+                .infor{
+                    text-align: right;
+                    .total{
+                        .num{
+                            color: #f74a4a;
+                            font-size: 20px;
+                        }
+                    }
+                    .desr{
+                        color: #999;
+                    }
+                }
+                #pay{
+                    width: 150px;
+                    font-size: 18px;
+                    text-align: center;
+                    color: #fff;
+                    line-height: 72px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background-color: #ec4828;
+                }
+            }
+        }
+        /* - 去结算：} count - */
+    }
+}
+
+
+
+
+
+
+/* - 选择按钮 - */
+.checkWarp{
+    float: left;
+    position: relative;
+    z-index: 10;
+    margin: 0 26px 0 30px;
+    overflow: hidden;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #ddd;
+    .checkbox{
+        margin: 0;
+        display: block;
+        background: #ec4828;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background: #fafafa;
+        &:checked + myCheckBox:after{
+            display: block;
+        }
+    }
+    myCheckBox{
+        position: absolute;
+        z-index: -1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        &:after{
+            background: #ec4828;
+            display: none;
+            content: "√";
+        }
+    }
+}

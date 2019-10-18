@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" href="/css/cart.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header></header>
+    <!-- / header -->
+
+    <!-- section -->
+    <section>
+        <div class="container">
+            <div class="cartWarp">
+                <!-- 空购物车 -->
+                <h2 id="noShopping">购物车空空如也，赶紧选购我们的商品吧！<a href="#">【去逛逛】</a></h2>
+                <!-- / 空购物车 -->
+
+                <!-- title -->
+                <div class="title clearFix">
+                    <p class="inforName">商品信息</p>
+                    <p class="money">单位（元）</p>
+                    <p class="num">数量</p>
+                    <p class="total">金额（元）</p>
+                    <p class="operation">操作</p>
+                </div>
+
+                <!---------------------------------- 供应商：supplier -->
+                <div class="supplier">
+                        <div class="sTitle clearFix">
+                            <div class="checkWarp">
+                                <input class="checkbox" type="checkbox">
+                                <myCheckBox></myCheckBox>
+                            </div>
+                            <p class="sName">穿越火线供应商：合泰文化</p>
+                        </div>
+    
+                        <div class="content clearFix">
+                            <div class="goods">
+    
+                                <div class="checkWarp">
+                                    <input class="checkbox" type="checkbox">
+                                    <myCheckBox></myCheckBox>
+                                </div>
+    
+                                <div class="imgWarp">
+                                    <a href="#">
+                                        <img src="/images/m4-ls.jpg" alt="">
+                                    </a>
+                                </div>
+                                <!-- 商品描述 -->
+                                <div class="desc">
+                                    <a class="goodsName">M4A1-雷神 枪模手办</a>
+                                    <div class="vip">VIP立减</div>
+                                    <div class="gift">赠品：主题收集-雷神枪模*1</div>
+                                </div>
+    
+                                <div class="sName">
+                                    <p class="goodsName">枪模：雷神</p>
+                                </div>
+    
+                                <div class="moneyWarp">
+                                    <div class="originMoney">298</div>
+                                    <div class="money">299</div>
+                                </div>
+                                <!-- 数量 -->
+                                <div class="numWarp">
+                                    <div class="warp">
+                                        <div class="less" id="less">-</div>
+                                        <input type="text" class="num" id="num" value="1" />
+                                        <div class="more" id="more">+</div>
+                                    </div>
+                                </div>
+    
+                                <div class="total">
+                                    298.00
+                                </div>
+                                <div class="operation">
+                                    <a class="del" href="#">删除</a>
+                                    <a class="moveToLove" href="#">移入收藏夹</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---------------------------------- / 供应商：supplier -->
+                    
+
+
+                <!---------------------------------------- 去结算：count -->
+                <div class="countWrap">
+                    <div class="box">
+                        <div class="infor">
+                            <div class="total">已选商品 <span class="num">0</span> 件 总价：<span class="num">0.00</span> 元</div>
+                            <div class="desr">不含运费和其他优惠</div>
+                        </div>
+                        <div class="pay" id="pay">去结算</div>
+                    </div>
+                </div>
+                <!--------------------------------------- / 去结算：count -->
+            </div>
+        </div>
+        <hr />
+
+        <div class="container">
+            <!-- 猜你喜欢 -->
+            <div class="forYou"></div>
+            <!-- / 猜你喜欢 -->
+        </div>
+
+    </section>
+    <!-- / section -->
+
+
+
+</body>
+<script src="/libs/require/require.min.js" data-main="/js/cart.js"></script>
+
+</html>
