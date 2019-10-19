@@ -2,6 +2,7 @@
 @import "./modules/reset.scss";
 @import "./modules/_header.scss";
 @import "./modules/_footer.scss";
+@import "./modules/goods.scss";
 
 
 section{
@@ -31,6 +32,8 @@ section{
         }
         .block{
             // 头部标题
+            width: 1180px;
+            margin: 0 auto;
             h2{
                 font-weight: bold;
                 color: #333;
@@ -63,49 +66,6 @@ section{
                 overflow: hidden;
                 width: 1180px;
                 height: 240px;
-            }
-            // 单件商品
-            .goodBox{
-                margin: 20px 17px 20px 0;
-                width: 280px;
-                float: left;
-                height: 356px;
-                border: 1px solid #eee;
-                transition: all .2s linear;
-                overflow: hidden;
-                background-color: #fff;
-                &:last-child{
-                    margin-right: 0;
-                }
-                img{
-                    width: 280px;
-                    height: 268px;
-                }
-                p{
-                    text-align: center;
-                }
-                .name{
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    line-height: 24px;
-                    font-size: 14px;
-                    color: #444;
-                }
-                .money{
-                    line-height: 25px;
-                    font-size: 16px;
-                    color: #f7545f;
-                    &::before{
-                        content: "￥";
-                        display: inline;
-                    }
-                }
-                &:hover{
-                    z-index: 2;
-                    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-                    transform: translate3d(0, -2px, 0);
-                }
             }
         }
     }

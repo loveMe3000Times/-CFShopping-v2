@@ -1,0 +1,16 @@
+<!-- 商品内容模板 -->
+<script type="text/html" id="shoppingContent">
+    {{ each list item index}}
+            <div class="goodBox">
+                <a href="#" class="good">
+                    <img src="{{ item.img }}" alt="blt">
+                    <p class="name">{{ item.name }}</p>
+                    <p class="money">{{ item.price }}
+                        {{ if item.originPrice}}
+                        <span class="originPrice">{{ item.originPrice }}</span>
+                        {{ /if }}
+                    </p>
+                </a>
+            </div>
+        {{ /each }}
+</script>

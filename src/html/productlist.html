@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="/css/productlist.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header></header>
+    <!-- / header -->
+
+    <!-- 网址路径 -->
+    <div class="hMap">
+        <div class="container">
+            <a href="#">首页></a>
+            <a href="#">首页></a>
+            <a href="#">首页</a>
+        </div>
+    </div>
+    <!-- / 网址路径 -->
+
+
+
+    <!----------------------------- 分类、排序： classify -->
+    <div class="container">
+        <div class="classify">
+            <div class="thisContainer">
+                <!-- 分类 -->
+                <div class="top">
+                    <ul class="content">
+                        <li class="title">分类:</li>
+                        <li><a href="#">全部</a></li>
+                        <li><a href="#">不全部</a></li>
+                        <li><a href="#">都全部</a></li>
+                        <li><a href="#">可以全部</a></li>
+                        <li><a href="#">不能全部</a></li>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    <!-- 排序 -->
+                    <ul class="order">
+                        <li class="title">排序:</li>
+                        <li><a href="#">向上排序</a></li>
+                        <li><a href="#">向下排序</a></li>
+                        <li><a href="#">向左排序</a></li>
+                        <li><a href="#">向右排序</a></li>
+                        <li><a href="#">向我排序</a></li>
+                    </ul>
+                    <!-- 筛选 -->
+                    <ul class="filtrate">
+                        <li class="title">筛选:</li>
+                        <li><span></span>有东西</li>
+                        <li><span></span>好东西</li>
+                        <li><span></span>奇葩东西</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------ / 分类、排序： classify -->
+
+
+
+
+    <!--------------------------- 商品展示区：section  -->
+    <div class="container">
+        <section>
+            <div class="thisContainer clearFix" id="goodsShow"></div>
+        </section>
+    </div>
+    <!--------------------------- / 商品展示区：section  -->
+
+
+    <!-- 商品内容模板 -->
+    <script type="text/html" id="shoppingContent">
+        {{ each list item index}}
+            <div class="goodBox">
+                <a href="#" class="good">
+                    <img src="{{ item.img }}" alt="blt">
+                    <p class="name">{{ item.name }}</p>
+                    <p class="money">{{ item.price }}
+                        {{ if item.originPrice}}
+                        <span class="originPrice">{{ item.originPrice }}</span>
+                        {{ /if }}
+                    </p>
+                </a>
+            </div>
+        {{ /each }}
+    </script>
+
+</body>
+<script src="/libs/require/require.min.js" data-main="/js/productlist"></script>
+
+</html>

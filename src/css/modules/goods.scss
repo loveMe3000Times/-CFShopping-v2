@@ -1,0 +1,51 @@
+.goodBox{
+    margin: 20px 13px 20px 0;
+    width: 280px;
+    float: left;
+    height: 356px;
+    border: 1px solid #eee;
+    transition: all .2s linear;
+    overflow: hidden;
+    background-color: #fff;
+    &:last-child{
+        margin-right: 0;
+    }
+    img{
+        width: 280px;
+        height: 268px;
+    }
+    p{
+        text-align: center;
+    }
+    .name{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        line-height: 24px;
+        font-size: 14px;
+        color: #444;
+    }
+    .money{
+        line-height: 25px;
+        font-size: 16px;
+        color: #f7545f;
+        &::before{
+            content: "￥";
+            display: inline;
+        }
+        .originPrice{
+            color: #ccc;
+            font-size: 12px;
+            text-decoration: line-through;
+            &::before{
+                content: "￥";
+                display: inline-block;
+            }
+        }
+    }
+    &:hover{
+        z-index: 2;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        transform: translate3d(0, -2px, 0);
+    }
+}

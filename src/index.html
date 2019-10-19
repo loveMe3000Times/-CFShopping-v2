@@ -28,10 +28,10 @@
             <!-- shopContainer -->
             <div class="shopContainer">
                 <!-- 商品区域 -->
-                <div class="block" id="shop1"></div>
-                <div class="block" id="shop2"></div>
-                <div class="block" id="shop3"></div>
-                <div class="block" id="shop4"></div>
+                <div class="block clearFix" id="shop1"></div>
+                <div class="block clearFix" id="shop2"></div>
+                <div class="block clearFix" id="shop3"></div>
+                <div class="block clearFix" id="shop4"></div>
 
                 <!-- 商品头部模板(主标题，副标题， 广告大图) -->
                 <script type="text/html" id="shoppingTitle">
@@ -46,13 +46,19 @@
                 </script>
                 <!-- 商品内容模板，四条商品信息 -->
                 <script type="text/html" id="shoppingContent">
-                    <div class="goodBox">
-                        <a href="#" class="good">
-                            <img src="{{ item.img }}" alt="blt">
-                            <p class="name">{{ item.name }}</p>
-                            <p class="money">{{ item.money }}</p>
-                        </a>
-                    </div>
+                    {{ each list item index}}
+            <div class="goodBox">
+                <a href="#" class="good">
+                    <img src="{{ item.img }}" alt="blt">
+                    <p class="name">{{ item.name }}</p>
+                    <p class="money">{{ item.price }}
+                        {{ if item.originPrice}}
+                        <span class="originPrice">{{ item.originPrice }}</span>
+                        {{ /if }}
+                    </p>
+                </a>
+            </div>
+        {{ /each }}
                 </script>
             </div>
             <!--  / shopContainer -->
