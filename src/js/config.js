@@ -5,11 +5,15 @@ require.config({
         "header": "js/modules/header",
         "template": "libs/art-template/template-web",
         "jqueryCookie": "libs/jquery-plugins/jquery.cookie",
-        "goods": "js/modules/goods"
+        "goods": "js/modules/goods",
+        "imgZoom": "libs/jquery-plugins/jquery.elevateZoom-3.0.8.min"
     },
     // 垫片: 垫片项目的运行，需要在其他包的基础上
     shim: {
         'jqueryCookie': {
+            deps: ['jquery']
+        },
+        "imgZoom": {
             deps: ['jquery']
         }
     }
