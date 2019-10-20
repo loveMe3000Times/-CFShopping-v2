@@ -14,7 +14,7 @@
     <div class="container">
 
         <div class="logoWarp">
-            <h1><img src="/images/logo-shopping.png" alt="穿越火线官网"></h1>
+            <h1><a href="/index.html"><img src="/images/logo-shopping.png" alt="穿越火线官网"></a></h1>
             <h2><img src="/images/ico-comm5.png" alt="smallLogo"></h2>
         </div>
         <div class="right">
@@ -30,7 +30,7 @@
             </div>
             <div class="loginWarp">
                 <!-- 未登录 -->
-                <div class="unlogin">
+                <div class="unlogin" data-toggle="modal" data-target="#loginModal">
                     <span class="icon icon-person"></span>
                     <span class="loginNow">立即登录</span>
                 </div>
@@ -72,7 +72,7 @@
         <li><a href="#">包类专区</a></li>
     </ul>
     <div class="right">
-        <span>全部商品分类</span>
+        <a href="/html/productlist.html"><span>全部商品分类</span></a>
         <span class="icon"></span>
     </div>
 </nav>
@@ -116,3 +116,62 @@
     </div>
 </div>
 <!-- / menu -->
+
+<!--------------------------- 登录框：loginModal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <!-- 标签页  -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#qqLogin" aria-controls="qqLogin" role="tab"
+                            data-toggle="tab">啾啾账号登录</a>
+                    </li>
+                    <li role="presentation"><a href="#wxLogin" aria-controls="wxLogin" role="tab"
+                            data-toggle="tab">窝信账号登录</a></li>
+                </ul>
+                <h5>啾啾和窝信是两个想通的账号，想怎么玩就怎么玩</h5>
+
+                <!-- qq -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="qqLogin">
+                        <div class="title">
+                            账号密码登录
+                        </div>
+                        <div class="tips">
+                            推荐使用工商银行登录，这样可以随便花
+                        </div>
+                        <form action="#" method="POST">
+                            <input type="text" placeholder="账号账号账号账号" id="userEmail" name="userEmail">
+                            <input type="password" placeholder="密码--->记不得记不得" id="psd" name="psd">
+                            <button>哥斯拉登陆</button>
+                        </form>
+                    </div>
+                    <!-- / qq -->
+
+                    <!-- wx -->
+                    <div role="tabpanel" class="tab-pane" id="wxLogin">
+                        <div class="title">
+                            账号密码登录
+                        </div>
+                        <img src="/images/wxLogin.jpg" alt="">
+                        <div class="tips">
+                            请打开付款码，对准摄像头登录
+                        </div>
+                    </div>
+                    <!-- / wx -->
+
+                </div>
+                <!-- / 标签页  -->
+            </div>
+            <div class="modal-footer">
+                <a href="#">忘了密码？</a>
+                <a href="/html/regiest.html">注册新账号</a>
+                <a href="#">意见反馈</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------------------ / 登录框：loginModal -->

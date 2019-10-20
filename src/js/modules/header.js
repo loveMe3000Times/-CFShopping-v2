@@ -1,8 +1,9 @@
-define(["jquery", "template"], ($, template) => {
+define(["jquery", "template", "bootStrap"], ($, template) => {
     /* - 功能： 用于加载header html代码，以及相关的js行为 - */
     class Header {
         constructor() {
             this.loadHtml().then(() => {
+                this.loginControl();   // 登录框控制
                 this.search();        // 搜索关联
                 this.searchUlClick(); // 搜索提示框
                 this.allShopControl();// 全部商品分类 按钮
@@ -66,10 +67,11 @@ define(["jquery", "template"], ($, template) => {
             });
         }
 
-        /** 移除 公告栏
-         *********************************/
-        removeNotice(){
-            $(".notice").remove();
+
+        /** 登录框控制
+         ********************************************************/
+        loginControl(){
+            // $('#loginModal').modal('show')
         }
     }
 

@@ -1,5 +1,5 @@
 require(['./config'], (config) => {
-    require(['header', 'template', 'goods'], (header, template, Goods) => {
+    require(['header', 'template', 'goods', 'bootStrap'], (header, template, Goods, bootStrap) => {
 
         class Index {
             constructor() {
