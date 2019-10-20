@@ -1,0 +1,74 @@
+@charset "utf-8";
+@import "./modules/_bootstrap.min.scss";
+
+body,html{
+    height: 100%;
+    overflow: hidden;
+    background-color: #f8f8f8;
+}
+
+.mainRight{
+    position: absolute;
+    left: 40%;
+    width: 60%;
+    .navbar{
+        padding-top: 20px;
+        border: 0;
+    }
+    .mytitle{
+        font-size: 40px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .pic{
+        font-size: 28px;
+    }
+    #registerForm{
+        input,.opt{
+            border: 1px #aaa solid;
+            border-radius: 4px;
+            background: 0 0;
+            text-align: left;
+            font-size: 20px;
+            width: 438px;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 20px;
+            margin-top: 24px;
+        }
+        .opt{
+            width: 100px;
+        }
+        .phone{
+            width: 320px;
+            margin-left: 18px;
+        }
+        #subForm{
+            border: 1px #3083ff solid;
+            border-radius: 4px;
+            background-color: #3487ff;
+            box-shadow: 0 5px 8px 0 rgba(24,95,255,.1);
+            color: #fff;
+            text-align: center;
+            font-weight: lighter;
+            background: #398bff;
+            width: 478px;
+            height: 60px;
+            margin: 40px 0 8px;
+            font-size: 24px;
+        }
+    }
+}
+
+aside{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 40%;
+    overflow: hidden;
+    overflow: hidden;
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}

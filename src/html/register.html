@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户注册</title>
+    <link href="/css/register.css" rel="stylesheet" />
+</head>
+
+<body>
+    <aside>
+        <img src="/images/register.jpg" alt="">
+    </aside>
+    <!---------------------------------------- right -->
+    <div class="mainRight">
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">
+                                <img alt="tea" src="/images/tea.png">
+                            </a>
+                            <!-- <div class="col-lg-4"></div> -->
+                        </div>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">好难呀</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">简体中文<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">java</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">python</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">意见反馈</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-offset-2 col-lg-4 mytitle">欢迎注册QQ</div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-offset-2 col-lg-5 pic">每一天，乐在沟通。</div>
+            <div class="col-lg-3 pic"><a href="#">免费靓仔</a></div>
+        </div>
+        <!-- 登录单 -->
+        <div class="row">
+            <div class="col-lg-offset-2 col-lg-7">
+                <form id="registerForm">
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="psd" placeholder="Password">
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle opt" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">号码 <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">zn 182</a></li>
+                                <li><a href="#">en 119</a></li>
+                                <li><a href="#">rs 递归</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">不要选了，都没有用</a></li>
+                            </ul>
+                        </div><!-- /btn-group -->
+                        <input type="text" placeholder="手机号码" class="form-control phone">
+                    </div><!-- /input-group -->
+
+                    <button type="submit" id="subForm" class="btn btn-default">注册</button>
+                </form>
+            </div>
+        </div>
+        <!-- / 登录单 -->
+
+    </div>
+    <!---------------------------------------- / right -->
+
+</body>
+<script src="/libs/require/require.min.js" data-main="/js/register"></script>
+
+</html>
