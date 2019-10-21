@@ -30,7 +30,7 @@
 
     <script type="text/html" id="detailScript">
         <!--------------------- detail --------------------->
-            <div id="detail">
+            <div id="detail" index="{{ data.id }}" >
                 <!-- left:图片区域 -->
                 <div class="left">
                     <div class="middleImg">
@@ -62,8 +62,11 @@
                     </div>
                     <div class="like" id="like">
                         <p>枪模</p>
-                        {{ each data.slike litem }}
-                        <a href="javasript:;">{{ litem }}</a>
+                        {{ each data.slike litem index }}
+                            {{ if index == 0 }}
+                                <a class="ac" href="javasript:;">{{ litem }}</a>
+                            {{ /if else }}
+                                <a href="javasript:;">{{ litem }}</a>
                         {{ /each }}
                     </div>
                     <div class="buyNum">

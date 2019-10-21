@@ -80,7 +80,7 @@
     <script type="text/html" id="shoppingContent">
         {{ each list item index}}
             <div class="goodBox">
-                <a href="/html/detail.html" class="good">
+                <a href="/html/detail.html?id={{ item.id }}" class="good">
                     <img src="{{ item.img }}" alt="blt">
                     <p class="name">{{ item.name }}</p>
                     <p class="money">{{ item.price }}

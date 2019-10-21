@@ -40,9 +40,14 @@
                             </div>
                             <p class="sName">穿越火线供应商：合泰文化</p>
                         </div>
-    
-                        <div class="content clearFix">
-                            <div class="goods">
+                        <!-- 同一供应商，商品内容区 -->
+                        <div id="supplierContent" class="content clearFix"></div>
+
+
+                        <!----------------------------- 商品内容artTemplate模板 -->
+                        <script type="text/html" id="shopContent">
+                            {{ each list item }}
+                            <div class="goods" index="{{ item.id }}">
     
                                 <div class="checkWarp">
                                     <input class="checkbox" type="checkbox">
@@ -50,43 +55,46 @@
                                 </div>
     
                                 <div class="imgWarp">
-                                    <a href="#">
-                                        <img src="/images/m4-ls.jpg" alt="">
+                                    <a href="/html/detail.html?id={{item.id}}">
+                                        <img src="{{ item.img }}" alt="{{ item.name }}">
                                     </a>
                                 </div>
                                 <!-- 商品描述 -->
                                 <div class="desc">
-                                    <a class="goodsName">M4A1-雷神 枪模手办</a>
+                                    <a class="goodsName">{{ item.name }}</a>
                                     <div class="vip">VIP立减</div>
-                                    <div class="gift">赠品：主题收集-雷神枪模*1</div>
+                                    <div class="gift">赠品：{{ item.gift }}</div>
                                 </div>
     
                                 <div class="sName">
-                                    <p class="goodsName">枪模：雷神</p>
+                                    <p class="goodsName">枪模：{{ item.like }}</p>
                                 </div>
     
                                 <div class="moneyWarp">
-                                    <div class="originMoney">298</div>
-                                    <div class="money">299</div>
+                                    <div class="originMoney">{{ item.originPrice }}</div>
+                                    <div class="money">{{ item.price }}</div>
                                 </div>
                                 <!-- 数量 -->
                                 <div class="numWarp">
                                     <div class="warp">
-                                        <div class="less" id="less">-</div>
-                                        <input type="text" class="num" id="num" value="1" />
-                                        <div class="more" id="more">+</div>
+                                        <div class="less" onselectstart="return false">-</div>
+                                        <input type="text" class="num"  value="{{ item.num }}" />
+                                        <div class="more" onselectstart="return false"">+</div>
                                     </div>
                                 </div>
     
                                 <div class="total">
-                                    298.00
+                                    {{ item.total }}
                                 </div>
                                 <div class="operation">
                                     <a class="del" href="#">删除</a>
                                     <a class="moveToLove" href="#">移入收藏夹</a>
                                 </div>
                             </div>
-                        </div>
+                            <hr />
+                            {{ /each }}
+                        </script>
+                        <!----------- 商品内容artTemplate模板 -->
                     </div>
                     <!---------------------------------- / 供应商：supplier -->
                     
