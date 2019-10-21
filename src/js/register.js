@@ -1,16 +1,18 @@
 require(['./config'], (config) => {
-    require([], () => {
+    require(['jquery'], ($) => {
         class Register {
             constructor() {
                 console.log(1)
             }
+
+            bannerControl(){
+                $('#banner').carousel({
+                    interval: 0
+                })
+            }
         }
 
-        bannerControl(){
-            $('#banner').carousel({
-                interval: 0
-            })
-        }
+        
 
         return new Register();
     })

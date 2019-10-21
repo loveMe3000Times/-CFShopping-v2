@@ -39,7 +39,7 @@ body{
     /* left: 图片区域 { */
     .left{
         float: left;
-        width: 440px;
+        width: 440px; 
         img{
             width: 100%;
             height: 100%;
@@ -56,6 +56,7 @@ body{
         }
         .smallImg{
             width: 100%;
+            margin-top: 10px;
             img{
                 float: left;
                 margin-left: 10px;
@@ -95,7 +96,7 @@ body{
         // 价格
         .price{
             width: 100%;
-            height: 32px;
+            height: 80px;
             padding: 20px 0 15px;
             .salePrice{
                 float: left;
@@ -233,7 +234,7 @@ body{
             }
             .num{
                 float: left;
-                height: 32px;
+                height: 34px;
                 border: 1px solid #ddd;
                 width: 58px;
                 border-left: none;
@@ -276,7 +277,7 @@ body{
             margin: 12px 0 0 30px;
             padding-left: 20px;
             display: block;
-            width: 64px;
+            width: 80px;
             height: 28px;
             line-height: 28px;
             border: 2px solid #ddd;
